@@ -1,0 +1,232 @@
+{
+  "oficina_mecanica": {
+    "clientes": [
+      {
+        "id": 1,
+        "nome": "João Silva Santos",
+        "cpf": "12345678901",
+        "telefone": "(11) 98765-4321",
+        "email": "joao.silva@email.com",
+        "endereco": "Rua das Flores, 123 - São Paulo, SP",
+        "data_cadastro": "2024-01-15T08:30:00"
+      },
+      {
+        "id": 2,
+        "nome": "Maria Oliveira Costa",
+        "cpf": "23456789012",
+        "telefone": "(11) 97654-3210",
+        "email": "maria.oliveira@email.com",
+        "endereco": "Av. Paulista, 456 - São Paulo, SP",
+        "data_cadastro": "2024-01-10T14:20:00"
+      }
+    ],
+    "veiculos": [
+      {
+        "id": 1,
+        "placa": "ABC1234",
+        "marca": "Toyota",
+        "modelo": "Corolla",
+        "ano": 2020,
+        "cor": "Prata",
+        "quilometragem": 35000,
+        "id_cliente": 1
+      },
+      {
+        "id": 2,
+        "placa": "DEF5678",
+        "marca": "Honda",
+        "modelo": "Civic",
+        "ano": 2019,
+        "cor": "Branco",
+        "quilometragem": 42000,
+        "id_cliente": 2
+      }
+    ],
+    "funcionarios": [
+      {
+        "id": 1,
+        "nome": "Pedro Henrique Machado",
+        "cpf": "11122233344",
+        "cargo": "Mecânico Sênior",
+        "salario": 4500.00,
+        "data_admissao": "2020-01-15",
+        "telefone": "(11) 99999-1111",
+        "especialidades": [
+          "Mecânica Geral",
+          "Motor e Transmissão",
+          "Suspensão e Direção"
+        ]
+      },
+      {
+        "id": 2,
+        "nome": "Lucas Fernandes Silva",
+        "cpf": "22233344455",
+        "cargo": "Mecânico Júnior",
+        "salario": 2800.00,
+        "data_admissao": "2021-03-10",
+        "telefone": "(11) 99999-2222",
+        "especialidades": [
+          "Mecânica Geral",
+          "Pneus e Alinhamento"
+        ]
+      }
+    ],
+    "servicos": [
+      {
+        "id": 1,
+        "nome": "Troca de Óleo",
+        "descricao": "Troca de óleo do motor e filtro",
+        "preco_base": 80.00,
+        "tempo_estimado": 30
+      },
+      {
+        "id": 2,
+        "nome": "Alinhamento e Balanceamento",
+        "descricao": "Alinhamento da direção e balanceamento das rodas",
+        "preco_base": 120.00,
+        "tempo_estimado": 60
+      },
+      {
+        "id": 3,
+        "nome": "Revisão dos Freios",
+        "descricao": "Inspeção e manutenção do sistema de freios",
+        "preco_base": 150.00,
+        "tempo_estimado": 90
+      }
+    ],
+    "fornecedores": [
+      {
+        "id": 1,
+        "nome_empresa": "Auto Peças SP Ltda",
+        "cnpj": "12345678000191",
+        "telefone": "(11) 3333-1111",
+        "email": "vendas@autopecassp.com.br",
+        "endereco": "Rua das Peças, 100 - São Paulo, SP"
+      },
+      {
+        "id": 2,
+        "nome_empresa": "Distribuidora Central",
+        "cnpj": "23456789000192",
+        "telefone": "(11) 3333-2222",
+        "email": "comercial@distcentral.com.br",
+        "endereco": "Av. Marginal, 200 - São Paulo, SP"
+      }
+    ],
+    "pecas": [
+      {
+        "id": 1,
+        "nome": "Filtro de Óleo",
+        "descricao": "Filtro de óleo para motores 1.0 a 2.0",
+        "preco_custo": 15.00,
+        "preco_venda": 25.00,
+        "estoque_atual": 50,
+        "estoque_minimo": 10,
+        "margem_lucro": 66.67,
+        "id_fornecedor": 1
+      },
+      {
+        "id": 2,
+        "nome": "Óleo Motor 5W30",
+        "descricao": "Óleo sintético 5W30 - 4 litros",
+        "preco_custo": 45.00,
+        "preco_venda": 75.00,
+        "estoque_atual": 30,
+        "estoque_minimo": 5,
+        "margem_lucro": 66.67,
+        "id_fornecedor": 1
+      }
+    ],
+    "ordens_servico": [
+      {
+        "id": 1,
+        "data_abertura": "2024-01-15T08:30:00",
+        "data_conclusao": "2024-01-15T17:00:00",
+        "status": "Concluída",
+        "observacoes": "Revisão preventiva conforme manual",
+        "valor_total": 630.00,
+        "id_veiculo": 1,
+        "id_cliente": 1,
+        "itens_servico": [
+          {
+            "id": 1,
+            "servico": "Troca de Óleo",
+            "quantidade": 1,
+            "preco_unitario": 80.00,
+            "subtotal": 80.00,
+            "funcionario": "Pedro Henrique Machado",
+            "status": "Concluído",
+            "pecas_utilizadas": [
+              {
+                "peca": "Filtro de Óleo",
+                "quantidade": 1,
+                "preco_unitario": 25.00
+              },
+              {
+                "peca": "Óleo Motor 5W30",
+                "quantidade": 4,
+                "preco_unitario": 75.00
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "estatisticas": {
+      "total_clientes": 10,
+      "total_veiculos": 12,
+      "total_funcionarios": 8,
+      "total_servicos": 15,
+      "total_fornecedores": 5,
+      "total_pecas": 17,
+      "total_ordens_servico": 10,
+      "faturamento_total": 4680.00,
+      "ticket_medio": 520.00,
+      "os_em_andamento": 2,
+      "os_concluidas": 7,
+      "os_canceladas": 0,
+      "pecas_estoque_critico": 3
+    },
+    "indicadores_performance": {
+      "funcionario_mais_produtivo": {
+        "nome": "Pedro Henrique Machado",
+        "servicos_executados": 5,
+        "faturamento_gerado": 1430.00
+      },
+      "servico_mais_executado": {
+        "nome": "Troca de Óleo",
+        "quantidade_execucoes": 3,
+        "faturamento_total": 240.00
+      },
+      "cliente_maior_valor": {
+        "nome": "João Silva Santos",
+        "total_gasto": 1280.00,
+        "total_os": 2
+      },
+      "marca_mais_atendida": {
+        "marca": "Toyota",
+        "quantidade_veiculos": 2,
+        "faturamento": 1280.00
+      }
+    },
+    "alertas": [
+      {
+        "tipo": "estoque_critico",
+        "mensagem": "Peças com estoque abaixo do mínimo",
+        "quantidade": 3,
+        "prioridade": "alta"
+      },
+      {
+        "tipo": "os_em_aberto",
+        "mensagem": "Ordens de serviço aguardando conclusão",
+        "quantidade": 2,
+        "prioridade": "media"
+      },
+      {
+        "tipo": "equipamentos_manutencao",
+        "mensagem": "Equipamentos precisam de manutenção preventiva",
+        "quantidade": 1,
+        "prioridade": "baixa"
+      }
+    ]
+  }
+}
